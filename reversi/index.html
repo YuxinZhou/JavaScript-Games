@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Reversi</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-<canvas id="myCanvas" width="480" height="480"></canvas>
+<div class="container">
+
+    <div class="row" style="padding-top: 75px; padding-left: 60px">
+        <h2>Riversi Online</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <canvas id="myCanvas" width="480" height="480"></canvas>
+        </div>
+        <div class="col-lg-4" style="padding: 50px">
+
+            <div class="row">
+                <label><input value="easy" type="radio" name="level" checked> &nbsp; Easy &nbsp;</label>
+            </div>
+            <div class="row">
+                <label><input value="medium" type="radio" name="level"> &nbsp; Medium &nbsp;</label>
+            </div>
+            <div class="row">
+                <label><input value="hard" type="radio" name="level"> &nbsp; Hard &nbsp;</label>
+            </div>
+
+            <div class="row">
+                <button class="btn-dark" style="margin-top: 10px" onclick="initial_board()">New Game</button>
+            </div>
+            <div class="row">
+                <label class="col-form-label" style="padding-top: 200px"> Black: &nbsp;</label>
+                <label class="col-form-label" style="padding-top: 200px" id="BLACK">2</label>
+            </div>
+            <div class="row">
+                <label class="col-form-label"> White: &nbsp;</label>
+                <label class="col-form-label" id="WHITE">2</label>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/controller.js"></script>
 <script src="js/alpha_beta_pruning.js"></script>
 </body>
